@@ -1,0 +1,33 @@
+module.exports = [
+  {
+    username: "JoeCooper1",
+    password: "Joella",
+    email: "joecooper1@email.com",
+    phone_number: "07123456789",
+    role: "Consultant",
+    hospital_id: 1,
+    department_id: 2,
+    admin: true,
+    manager_id: 0,
+  },
+  {
+    username: "EllaCooper1",
+    password: "Joella",
+    email: "ellacooper1@email.com",
+    phone_number: "07123456788",
+    role: "Junior MD",
+    hospital_id: 1,
+    department_id: 2,
+    manager_id: 1,
+  },
+  {
+    username: "BradScotland1",
+    password: "Scotland",
+    email: "bradscotland1@email.com",
+    phone_number: "07123456787",
+    role: "Radiologist",
+    hospital_id: 2,
+    department_id: 3,
+    manager_id: 0,
+  },
+];
