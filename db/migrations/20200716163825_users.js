@@ -11,7 +11,7 @@ exports.up = function (knex) {
     usersTable.integer("hospital_id").references("hospitals.hospital_id");
     usersTable.integer("department_id").references("departments.department_id");
     //Is the user an admin or not?
-    usersTable.boolean("admin?").defaultTo(false);
+    usersTable.boolean("admin").defaultTo(false);
     //Is the user available? options: on-site, on-break, unavailable, on-call, inactive
     usersTable.string("status").defaultTo("inactive");
     //Manager

@@ -8,14 +8,14 @@ exports.up = function (knex) {
     postsTable.integer("from_user").references("users.user_id");
     postsTable.integer("to_user").references("users.user_id");
     //Has the post been seen and acknowledged?
-    postsTable.boolean("seen?").defaultTo(false);
+    postsTable.boolean("seen").defaultTo(false);
     postsTable.timestamp("seen_at");
     //When was the post sent
     postsTable.timestamp("sent_at").defaultTo(knex.fn.now());
     //Has the post been resolved?
     postsTable.boolean("resolved_by_sender").defaultTo(false);
     postsTable.boolean("resolved_by_recipient").defaultTo(false);
-    postsTable.boolean("resolved?").defaultTo(false);
+    postsTable.boolean("resolved").defaultTo(false);
     postsTable.timestamp("resolved_at");
     //Where is the alert being sent from, if relevant
     postsTable.integer("department_id").references("departments.department_id");
